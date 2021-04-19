@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+
+\usepackage[left=1in,top=1in,right=1in,bottom=1in]{geometry}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage[section]{placeins}
+\usepackage{float}
+
+\doublespacing
+
+\begin{document}
+
+\title{TP3}
+\author{Xinzhe Qi (xqi)}
+\date{Due May 2}
+\maketitle
+
+\section{Update}
+From TP2 to TP3, I finished socket part and add introduction screen, game rules and end screen to the game.
+
+\section{Project Description}
+The name of this term project is "Five in a Row," which is a classic game that requires player to have five chess in a line horizontally, vertically, or diagonally. My plan is to design two branches of game, which include AI game, and two-player game. In AI game, player's opponent will be AI which will provide the next move. In multi-player game, there will be two players who can potentially play on two different computers. 
+
+\section{Competitive Analysis}
+In the gallery, I find two projects which share similar ideas and features with mine. The first one is "Battle Mine." The other is "Card Game."\\
+Both of them use pygame and socket as their modules. Both of them use sockets to realize multiplayer function. This allows the user to interact with other players.\\
+The first one has a feature to choose "easy", "medium", and "difficulty." It can provide different experience with different levels of difficulty.\\
+The second one has an AI to play cards with one player. AI will determine its next move, based on user's move.\\
+Finally, they both have a scoring board to keep track of the highest score.\\
+
+I think my project is competitive because I did not see "five in row" AI in the gallery. I think this project can stand out with its AI algorithm. 
+
+\begin{center}
+\begin{tabular}{ ||c|c|c|c|c|c||} 
+ \hline
+& Dimension I 	& Dimension II & Dimension III & Dimension IV 				& Dimension V \\
+ \hline
+Battle Mine & pygame and socket & / 		& multi-player 		& Different levels 	& score board \\ 
+\hline
+Card Game & pygame and socket & AI player 	& / 			& / 					& score board \\ 
+ \hline
+\end{tabular}
+\end{center}
+
+\section{Structural Plan}
+Structural plan: \\
+One file for AI playing, which contains functions to evaluate the benefits of choosing a move. It will include AI's optimal movement list. Player optimal movement list. And a function to determine whether the game is over.\\
+
+One file for multi-player game, using sockets. One is client.py, and the other one is server.py. Create objects for two players, including their movements list. So two players can play on different computers. Potentially, I may also add features where player can choose black and white chess.\\
+
+\section{Algorithmic Plan}
+I think the trickiest part in this project is AI. I will set up a score level for connecting chess. It means that if, for example, there exists two and three connecting chess at the same time. AI will choose latter one first, since it will be more beneficially. Also, it will check whether its opponents have the situations where three chess have already been in line. Then its optimal movement will change based on opponent's chess. 
+
+\section{Timeline Plan}
+For TP1, I have finished the chess movement, board, music. Also I have already started to work on AI algorithms, but it still has bugs. I made another tech demo for socket to demonstrate that I can add its feature to my project later.\\
+For TP2, I am going to add multiplayer feature onto the project.\\
+For the final version, i will try to enhance the efficiency of the algorithm so that it won't take too much time come up with a move. 
+
+\section{Version Control Plan}
+My version control plan is to use Onedrive. Basically, eveytime I save the file the Onedrive will have a history record this file. So I can easily recover previous plans if I want to. Here is a screenshot of history records.\\
+
+\includegraphics[scale=0.7]{version_control.png}
+
+\section{Module List}
+pygame, and socket.
+
+\section{StoryBoard}
+
+\includegraphics[scale=0.15]{storyboard.jpeg}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
